@@ -37,6 +37,7 @@ CREATE TABLE bikes_sold_table (
     sold BOOLEAN NOT NULL,
     price_sold FLOAT,
     initial_price FLOAT NOT NULL,
+    image varchar (255),
     primary key (id),
     foreign key (user_id) REFERENCES users(id),
     foreign key (ad_id) REFERENCES ads(id)
