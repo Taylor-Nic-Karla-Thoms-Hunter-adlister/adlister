@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static java.lang.Float.parseFloat;
+
 @WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/create")
 public class CreateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -18,16 +20,24 @@ public class CreateAdServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
-        request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
-            .forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/ads/saleform.jsp")
+                .forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
+        request.setAttribute("price", parseFloat(request.getParameter("price")));
+        request.setAttribute("speed", parseFloat(request.getParameter("speed")));
         Ad ad = new Ad(
-            user.getId(),
-            request.getParameter("title"),
-            request.getParameter("description")
+                user.getId(),
+                request.getParameter("title"),
+                request.getParameter("description"),
+                request.getParameter("brand"),
+                request.getParameter("type"),
+                (Integer) request.getAttribute("speed:"),
+                (Float) request.getAttribute("price"),
+                request.getParameter("image"),
+                request.getParameter("size")
         );
         DaoFactory.getAdsDao().insert(ad);
         response.sendRedirect("/ads");

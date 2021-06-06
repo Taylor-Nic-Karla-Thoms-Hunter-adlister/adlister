@@ -11,6 +11,7 @@
 
 <div class="container">
     <h1>Here Are all the ads!</h1>
+    <h4>Become a member to see details!</h4>
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">

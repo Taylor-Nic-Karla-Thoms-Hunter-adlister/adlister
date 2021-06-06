@@ -9,17 +9,17 @@
 
 <body>
 
-<jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<jsp:include page="/WEB-INF/partials/navbar-after.jsp" />
 
 <div class="container">
     <h5>Welcome, ${sessionScope.user.username}!</h5>
-    <form action="${pageContext.request.contextPath}/sellform" method="POST">
+    <form action="${pageContext.request.contextPath}/create" method="POST">
         <div class="form-group">
             <label for="title">Title</label>
             <input id="title" name="title" class="form-control" type="text">
         </div>
         <div class="form-group">
-            <label for="description">Link an image</label>
+            <label for="description">Description</label>
             <input id="description" name="description" class="form-control" type="text">
         </div>
         <div class="form-group">
@@ -27,7 +27,7 @@
             <input id="brand" name="brand" class="form-control" type="text">
         </div>
         <div class="form-group">
-            <label for="type">Link an image</label>
+            <label for="type">Type</label>
             <input id="type" name="type" class="form-control" type="text">
         </div>
         <div class="form-group">
@@ -39,8 +39,12 @@
             <input id="price" name="price" class="form-control" type="text">
         </div>
         <div class="form-group">
-            <label for="image">Link an image</label>
+            <label for="image">Link Picture of Bike</label>
             <input id="image" name="image" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+            <label for="size">Size</label>
+            <input id="size" name="size" class="form-control" type="text">
         </div>
         <input type="submit" class="btn btn-primary btn-block" value="Submit">
     </form>
