@@ -21,6 +21,13 @@
         <div class="col-md-6">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
+            <ul>
+                <li>${ad.brand}</li>
+                <li>${ad.type}</li>
+                <li>${ad.size}</li>
+                <li>${ad.speed}</li></ul>
+            <h4>${ad.price}</h4>
+            <p><img src="${ad.image}" alt="bike photo"></p>
         </div>
     </c:forEach>
 </div>
