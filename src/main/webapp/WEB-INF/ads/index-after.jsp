@@ -9,6 +9,11 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar-after.jsp" />
 
+<form id="searchBar" class="d-flex">
+    <input id="searchInput" class="form-control" type="search" placeholder="Search" aria-label="Search">
+    <button id="search-button" class="btn btn-success" type="submit">Search</button>
+</form>
+
 <div class="container">
     <h1>Here Are all the ads!</h1>
 
