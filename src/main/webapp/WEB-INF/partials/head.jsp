@@ -13,8 +13,10 @@
 <style>
     body {
         background-color: white;
+        font-size: 12px;
     }
 
+    /* -------------------- Nav Feature -------------------- */
     .user-pic {
         width: 24px;
         height: 24px;
@@ -35,5 +37,26 @@
         color: white;
         margin-top: 1em;
         padding: .5em;
+    }
+
+    a.nav-link-after {
+        text-decoration: none;
+        color: white;
+        margin-top: 1.25em;
+        padding: .5em;
+    }
+
+    /* -------------------- Search Feature -------------------- */
+    #searchBar {
+        border-radius: 0;
+        border: 20px solid rgba(0, 0, 0, 0.3);
+    }
+
+    #search-button {
+        border-radius: 0;
+    }
+
+    #searchInput {
+        border-radius: 0;
     }
 </style>
