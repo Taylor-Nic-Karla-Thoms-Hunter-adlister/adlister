@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import static java.lang.Float.parseFloat;
+import static java.lang.Integer.parseInt;
 
 @WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/create")
 public class CreateAdServlet extends HttpServlet {
@@ -26,20 +27,18 @@ public class CreateAdServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
-        request.setAttribute("price", parseFloat(request.getParameter("price")));
-        request.setAttribute("speed", parseFloat(request.getParameter("speed")));
         Ad ad = new Ad(
                 user.getId(),
                 request.getParameter("title"),
                 request.getParameter("description"),
                 request.getParameter("brand"),
                 request.getParameter("type"),
-                (Integer) request.getAttribute("speed:"),
-                (Float) request.getAttribute("price"),
+                parseInt(request.getParameter("speed")),
+                parseFloat(request.getParameter("price")),
                 request.getParameter("image"),
                 request.getParameter("size")
         );
         DaoFactory.getAdsDao().insert(ad);
-        response.sendRedirect("/ads");
+        response.sendRedirect("/access");
     }
 }
