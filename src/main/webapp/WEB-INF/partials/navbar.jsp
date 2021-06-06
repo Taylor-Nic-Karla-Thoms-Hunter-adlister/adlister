@@ -1,6 +1,6 @@
 <nav class="navbar">
     <div class="container-fluid" id="nav-align">
-        <a class="navbar-brand" href="/">SABE</a>
+        <a class="navbar-brand" href="home">SABE</a>
         <form class="d-flex">
             <a class="nav-link" href="ads">Listings</a>
             <a class="nav-link" href="login">Login</a>
