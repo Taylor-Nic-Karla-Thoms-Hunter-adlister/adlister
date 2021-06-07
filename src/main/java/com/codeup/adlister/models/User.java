@@ -9,7 +9,7 @@ public class User {
     private String password;
 
 
-    private String image;
+//    private String image;
 
     public User() {}
 
@@ -59,11 +59,11 @@ public class User {
         this.password = Password.hash(password);
     }
 
-    public String getImage() {
-        return image;
-    }
+//    public String getImage() {
+//        return image;
+//    }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
+//    public void setImage(String image) {
+//        this.image = image;
+//    }
 }
