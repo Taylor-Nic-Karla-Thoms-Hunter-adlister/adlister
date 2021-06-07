@@ -15,7 +15,7 @@
         function myFunction() {
             console.log("I was clicked");
 
-            const client = filestack.init("AJte3lqpmREeQ9vr55M2wz");
+            const client = filestack.init(FileStackAPI);
             const options = {
                 accept: ["image/*"],
                 onUploadDone: (res) => {
