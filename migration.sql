@@ -13,6 +13,9 @@ CREATE TABLE users
     username VARCHAR(240) NOT NULL,
     email    VARCHAR(240) NOT NULL,
     password VARCHAR(255) NOT NULL,
+    image blob,
+    UNIQUE (username),
+    UNIQUE (email),
     PRIMARY KEY (id)
 );
 
@@ -27,7 +30,7 @@ CREATE TABLE ads
     bike_type     varchar(30),
     speed         int UNSIGNED,
     size          varchar(30),
-    image         varchar(255),
+    image         blob,
     sold          boolean default false,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users (id)

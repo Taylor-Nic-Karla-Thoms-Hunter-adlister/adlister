@@ -38,9 +38,9 @@
             <label for="price">Price</label>
             <input id="price" name="price" class="form-control" type="text">
         </div>
-        <div class="form-group">
-            <label for="image">Link Picture of Bike</label>
-            <input id="image" name="image" class="form-control" type="text">
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="image">Upload</label>
+            <input type="file" class="form-control" id="image" name="image">
         </div>
         <div class="form-group">
             <label for="size">Size</label>
