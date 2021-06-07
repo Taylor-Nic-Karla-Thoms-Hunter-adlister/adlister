@@ -10,6 +10,11 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+<%--<!-- FileStack API -->--%>
+<%--<script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>--%>
+
+<%--<script type="text/javascript" src="${pageContext.request.contextPath}/WEB-INF/js/keys.js"></script>--%>
+
 <style>
     body {
         background-color: white;
@@ -58,5 +63,14 @@
 
     #searchInput {
         border-radius: 0;
+    }
+
+    /* -------------------- Sale Feature -------------------- */
+    .hidden {
+        visibility: hidden;
+    }
+
+    .visible {
+        visibility: visible;
     }
 </style>

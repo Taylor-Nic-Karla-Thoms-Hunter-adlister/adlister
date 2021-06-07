@@ -1,4 +1,4 @@
-DROP DATABASE sabe_db;
+DROP DATABASE IF EXISTS sabe_db;
 CREATE DATABASE IF NOT EXISTS sabe_db;
 
 USE sabe_db;
@@ -13,7 +13,6 @@ CREATE TABLE users
     username VARCHAR(240) NOT NULL,
     email    VARCHAR(240) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    image blob,
     UNIQUE (username),
     UNIQUE (email),
     PRIMARY KEY (id)
@@ -30,7 +29,7 @@ CREATE TABLE ads
     bike_type     varchar(30),
     speed         int UNSIGNED,
     size          varchar(30),
-    image         blob,
+    image         varchar(255),
     sold          boolean default false,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users (id)

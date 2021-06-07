@@ -27,7 +27,7 @@
                 <li>${ad.size}</li>
                 <li>${ad.speed}</li></ul>
             <h4>${ad.price}</h4>
-            <p><img src="${ad.image}" alt="bike photo"></p>
+            <p><img src="${ad.image}" alt="bike photo" width="50" height="50"></p>
         </div>
     </c:forEach>
 </div>
