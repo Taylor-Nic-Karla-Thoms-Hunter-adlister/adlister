@@ -35,7 +35,7 @@ public class CreateAdServlet extends HttpServlet {
                 request.getParameter("type"),
                 parseInt(request.getParameter("speed")),
                 parseFloat(request.getParameter("price")),
-                request.getParameter("image"),
+                request.getParameter("hidden"),
                 request.getParameter("size")
         );
         DaoFactory.getAdsDao().insert(ad);

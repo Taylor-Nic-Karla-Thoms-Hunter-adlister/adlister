@@ -5,6 +5,34 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Sales Form" />
     </jsp:include>
+
+    <!-- FileStack API -->
+    <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+
+    <script type="text/javascript" src="${pageContext.request.contextPath}/WEB-INF/js/keys.js"></script>
+
+    <script>
+        function myFunction() {
+            console.log("I was clicked");
+
+            const client = filestack.init("AJte3lqpmREeQ9vr55M2wz");
+            const options = {
+                accept: ["image/*"],
+                onUploadDone: (res) => {
+                    let handle = "https://www.filestackapi.com/api/file/" + res.filesUploaded[0].handle;
+
+                    if (handle !== null || handle !== "") {
+                        $('.fa-check').toggleClass('hidden', 'visible');
+                    }
+
+                    document.getElementById('hidden').value = handle;
+                }
+
+            };
+
+            client.picker(options).open();
+        }
+    </script>
 </head>
 
 <body>
@@ -38,15 +66,17 @@
             <label for="price">Price</label>
             <input id="price" name="price" class="form-control" type="text">
         </div>
-        <div class="input-group mb-3">
-            <label class="input-group-text" for="image">Upload</label>
-            <input type="file" class="form-control" id="image" name="image">
-        </div>
         <div class="form-group">
             <label for="size">Size</label>
             <input id="size" name="size" class="form-control" type="text">
         </div>
-        <input type="submit" class="btn btn-primary btn-block" value="Submit">
+        <div class="form-group mt-2">
+            <label for="bikeImage">Picture: (optional)</label>
+            <button id="bikeImage" type="button" class="btn btn-success" onclick="myFunction()">Upload</button>
+            <span><i class="fa fa-check hidden" style="color:green"></i></span>
+        </div>
+        <input type="submit" class="btn btn-success btn-block" value="Submit">
+        <input id="hidden" name="hidden" class="form-control" type="hidden" value="">
     </form>
 </div>
 
