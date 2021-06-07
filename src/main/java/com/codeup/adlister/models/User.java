@@ -9,14 +9,13 @@ public class User {
     private String password;
 
 
-    private String image;
+//    private String image;
 
     public User() {}
 
-    public User(String username, String email, String password, String image) {
+    public User(String username, String email, String password) {
         this.username = username;
         this.email = email;
-        this.image = image;
         setPassword(password);
 
     }
@@ -60,11 +59,11 @@ public class User {
         this.password = Password.hash(password);
     }
 
-    public String getImage() {
-        return image;
-    }
+//    public String getImage() {
+//        return image;
+//    }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
+//    public void setImage(String image) {
+//        this.image = image;
+//    }
 }
