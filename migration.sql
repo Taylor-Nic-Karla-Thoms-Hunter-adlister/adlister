@@ -1,4 +1,4 @@
-DROP DATABASE sabe_db;
+DROP DATABASE IF EXISTS sabe_db;
 CREATE DATABASE IF NOT EXISTS sabe_db;
 
 USE sabe_db;
@@ -13,6 +13,8 @@ CREATE TABLE users
     username VARCHAR(240) NOT NULL,
     email    VARCHAR(240) NOT NULL,
     password VARCHAR(255) NOT NULL,
+    UNIQUE (username),
+    UNIQUE (email),
     PRIMARY KEY (id)
 );
 
