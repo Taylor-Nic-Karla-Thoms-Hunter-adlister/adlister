@@ -123,4 +123,4 @@ Temporary Items
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all,macos
 /src/main/java/com/codeup/adlister/dao/Config.java
 /target/
-/src/main/webapp/WEB-INF/js/keys.js
+/src/main/webapp/js/keys.js
