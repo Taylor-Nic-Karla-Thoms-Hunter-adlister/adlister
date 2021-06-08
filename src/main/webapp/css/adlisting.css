@@ -1,0 +1,48 @@
+
+.scrolling-wrapper {
+    justify-content: space-evenly;
+    margin: 2em 0em;
+
+}
+.card p{
+    margin: .5em;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.card {
+    border: solid 3px seagreen;
+    border-radius: 2.5em;
+
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    border-radius: 2em;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+#searchBar {
+    width: auto;
+}
+
+ /*Medium ViewPort and Up */
+
+/*.dropdown-menu.show{*/
+/*    text-align: right;*/
+/*    !*flex-flow: row nowrap*!*/
+/*}*/
+
+/*.dropdown-menu.show a{*/
+/*    width: 100%;*/
+/*    !*flex-flow: row nowrap*!*/
+/*}*/
+/*.dropdown-menu.show a label{*/
+/*    margin-right: 1em;*/
+/*}*/
+/*.dropdown-menu.show a input{}*/

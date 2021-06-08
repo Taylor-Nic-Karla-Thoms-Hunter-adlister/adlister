@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar sticky-top">
     <div class="container-fluid" id="nav-align">
         <a class="navbar-brand" href="${pageContext.request.contextPath}/">SABE</a>
         <form class="d-flex">
