@@ -11,6 +11,13 @@
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
     </div>
+    <h2>
+        <a href="/create">Create New Listing</a>
+
+        <a href="/access">List All Ads</a>
+
+    </h2>
+
 
 </body>
 </html>

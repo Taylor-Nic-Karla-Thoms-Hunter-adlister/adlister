@@ -23,10 +23,10 @@
             <p>${ad.description}</p>
             <ul>
                 <li>${ad.brand}</li>
-                <li>${ad.type}</li>
+                <li>${ad.bike_type}</li>
                 <li>${ad.size}</li>
                 <li>${ad.speed}</li></ul>
-            <h4>${ad.price}</h4>
+            <h4>${ad.initial_price}</h4>
             <p><img src="${ad.image}" alt="bike photo"></p>
         </div>
     </c:forEach>

@@ -1,31 +1,30 @@
 package com.codeup.adlister.models;
 
-import static java.lang.Float.parseFloat;
 import static java.lang.Integer.parseInt;
 
 public class Ad {
-    private long id;
-    private long userId;
+    private int id;
+    private int user_id;
     private String title;
     private String description;
+    private float initial_price;
     private String brand;
-    private String type;
-    private String size;
+    private String bike_type;
     private int speed;
-    private float price;
+    private String size;
     private String image;
 
 
-    public Ad(long userId, String title, String description, String brand, String type, int speed, float price, String image, String size) {
-        this.userId = userId;
+    public Ad(int user_id, String title, String description, float initial_price, String brand, String bike_type, int speed, String size, String image) {
+        this.user_id = user_id;
         this.title = title;
         this.description = description;
+        this.initial_price = initial_price;
         this.brand = brand;
-        this.type = type;
+        this.bike_type = bike_type;
         this.speed = speed;
-        this.price = price;
-        this.image = image;
         this.size = size;
+        this.image = image;
     }
 
 
@@ -33,16 +32,16 @@ public class Ad {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public long getUserId() {
-        return userId;
+    public int getUserId() {
+        return user_id;
     }
 
-    public void setUserId(long userId) {
-        this.userId = userId;
+    public void setUserId(int user_id) {
+        this.user_id = user_id;
     }
 
     public String getTitle() {
@@ -61,26 +60,27 @@ public class Ad {
         this.description = description;
     }
 
+    public float getInitialPrice() { return initial_price; }
+
+    public void setInitialPrice(float initial_price){ this.initial_price = initial_price; }
+
     public String getBrand() { return brand; }
 
     public void setBrand(String brand){ this.brand = brand; }
-    public String getType() { return type; }
 
-    public void setType(String type){ this.type = type; }
+    public String getBikeType() { return bike_type; }
+
+    public void setBikeType(String bike_type){ this.bike_type = bike_type; }
 
     public int getSpeed() { return speed; }
 
     public void setSpeed(int speed){ this.speed = speed; }
 
-    public float getPrice() { return price; }
+    public String getSize() { return size; }
 
-    public void setPrice(float price){ this.price = price; }
+    public void setSize(String size){ this.image = size; }
 
     public String getImage() { return image; }
 
     public void setImage(String image){ this.image = image; }
-
-    public String getSize() { return size; }
-
-    public void setSize(String size){ this.image = size; }
 }

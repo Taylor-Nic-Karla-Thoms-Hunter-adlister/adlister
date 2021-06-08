@@ -9,23 +9,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
 import static java.lang.Float.parseFloat;
 import static java.lang.Integer.parseInt;
 
-@WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/create")
-public class CreateAdServlet extends HttpServlet {
+@WebServlet(name = "controllers.UpdateAdServlet", urlPatterns = "/update")
+public class UpdateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") == null) {
-            response.sendRedirect("/login");
+            response.sendRedirect("/access");
             return;
         }
-        request.getRequestDispatcher("/WEB-INF/ads/saleform.jsp")
+        request.getRequestDispatcher("/WEB-INF/ads/update.jsp")
                 .forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
+        String update = request.getParameter("update");
         Ad ad = new Ad(
                 user.getId(),
                 request.getParameter("title"),
@@ -36,6 +36,7 @@ public class CreateAdServlet extends HttpServlet {
                 parseInt(request.getParameter("speed")),
                 request.getParameter("size"),
                 request.getParameter("image")
+
         );
         DaoFactory.getAdsDao().insert(ad);
         response.sendRedirect("/access");
