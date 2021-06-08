@@ -9,7 +9,7 @@
     <!-- FileStack API -->
     <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
 
-    <script type="text/javascript" src="${pageContext.request.contextPath}/WEB-INF/js/keys.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}../../js/keys.js"></script>
 
     <script>
         function myFunction() {
@@ -19,6 +19,7 @@
             const options = {
                 accept: ["image/*"],
                 onUploadDone: (res) => {
+                    console.log(res);
                     let handle = "https://www.filestackapi.com/api/file/" + res.filesUploaded[0].handle;
 
                     if (handle !== null || handle !== "") {
