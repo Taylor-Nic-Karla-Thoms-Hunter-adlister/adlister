@@ -4,8 +4,15 @@
     margin: 2em 0em;
 
 }
+.card p{
+    margin: .5em;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
 .card {
-    border: none;
+    border: solid 3px seagreen;
+    border-radius: 2.5em;
+
 }
 
 img{

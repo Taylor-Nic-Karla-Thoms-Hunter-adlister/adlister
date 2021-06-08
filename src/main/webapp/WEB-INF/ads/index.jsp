@@ -23,7 +23,8 @@
     <main class="genre-card-holder">
             <div class="genre-card row g-0 scrolling-wrapper">
                 <c:forEach var="ad" items="${ads}">
-                    <div class=" col-5 my-3 p-0 w-auto card m-1">
+                    <div class="col-5 my-3 p-0 w-auto card m-1">
+                        <p class="text-center">${ad.title}</p>
                         <a id="${ad.id}" class="image card-image" href="#" data-toggle="modal" data-target="#exampleModal">
                             <img id="${ad.title}" class="imgMovie position-relative" src="https://fer-uig.glitch.me"/>
                         </a>
