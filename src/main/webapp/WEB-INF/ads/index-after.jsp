@@ -5,7 +5,9 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Viewing All The Ads" />
     </jsp:include>
+  
     <link rel="stylesheet" href="./css/navbarUnrestricted.css">
+    <link rel="stylesheet" href="./css/adlisting.css">
 
 </head>
 <body>
@@ -17,21 +19,19 @@
 </form>
 
 <div class="container">
-    <h1>Here Are all the ads!</h1>
-
-    <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
-            <ul>
-                <li>${ad.brand}</li>
-                <li>${ad.type}</li>
-                <li>${ad.size}</li>
-                <li>${ad.speed}</li></ul>
-            <h4>${ad.price}</h4>
-            <p><img src="${ad.image}" alt="bike photo" width="50" height="50"></p>
+    <%--    UnRESTRICTED VIEW W/ JS CLICK EVENT FOR MODAL     --%>
+    <main class="genre-card-holder">
+        <div class="genre-card row g-0 scrolling-wrapper">
+            <c:forEach var="ad" items="${ads}">
+                <div class="col-5 my-3 p-0 w-auto card m-1">
+                    <p class="text-center">${ad.title}</p>
+                    <a id="${ad.title}" class="image card-image" href="/ads/more_info?${ad.id}">
+                        <img id="${ad.title}" class="imgMovie position-relative" src="https://fer-uig.glitch.me"/>
+                    </a>
+                </div>
+            </c:forEach>
         </div>
-    </c:forEach>
+    </main>
 </div>
 
 </body>
