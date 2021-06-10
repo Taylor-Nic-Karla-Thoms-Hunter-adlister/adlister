@@ -1,6 +1,3 @@
-DROP DATABASE sabe_db;
-
-CREATE DATABASE IF NOT EXISTS sabe_db;
 
 USE sabe_db;
 
