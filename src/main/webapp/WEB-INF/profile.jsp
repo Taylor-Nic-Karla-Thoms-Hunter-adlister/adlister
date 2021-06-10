@@ -16,6 +16,8 @@
 
         <a href="/access">List All Ads</a>
 
+        <a href="/user-ads">View Your Ads</a>
+
     </h2>
 
 

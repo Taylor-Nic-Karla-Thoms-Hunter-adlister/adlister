@@ -19,11 +19,11 @@
 <jsp:include page="/WEB-INF/partials/navbar-after.jsp" />
 
 <div class="container">
-    <h5>Welcome, ${sessionScope.user.username}!</h5>
+    <h5>Hello, ${sessionScope.user.username}!</h5>
     <form action="${pageContext.request.contextPath}/update" method="POST">
         <div class="form-group">
             <label for="title">Title</label>
-            <input id="title" name="title" class="form-control" type="text" >
+            <input id="title" name="title" class="form-control" type="text" value="<%=rs.getString("name")%>>
         </div>
         <div class="form-group">
             <label for="description">Description</label>
