@@ -17,6 +17,12 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Viewing All The Ads"/>
     </jsp:include>
+    <style>
+        a {
+            color: black;
+        }
+    </style>
+</head>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar-after.jsp"/>
@@ -56,10 +62,10 @@
             <img class="owner-pic d-block" src="https://fer-uig.glitch.me" alt="user-icon">
         </div>
         <div class="col-4 text-center">
-            <button type="button" class="btn btn-primary" value="message">Make Offer</button>
+            <button type="button" class="btn btn-primary"><a href="mailto:${owner.email}?subject=${ad.title}" target="_top">Make Offer</a></button>
         </div>
         <div class="col-4 text-center">
-            <form action="/access" method="POST">
+            <form class="my-auto" action="/access" method="POST">
                 <input type="hidden" name="owner" class="btn btn-warning" value="${owner.id}">
                 <input type="submit" name="more" class="btn btn-warning" value="More Posts">
             </form>
