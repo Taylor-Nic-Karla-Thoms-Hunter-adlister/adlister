@@ -15,6 +15,19 @@ public class Ad {
     private float price;
     private String image;
 
+    public Ad(long id, long userId, String title, String description, String brand, String type, int speed, float price, String image, String size) {
+       this.id = id;
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.brand = brand;
+        this.type = type;
+        this.speed = speed;
+        this.price = price;
+        this.image = image;
+        this.size = size;
+    }
+
 
     public Ad(long userId, String title, String description, String brand, String type, int speed, float price, String image, String size) {
         this.userId = userId;

@@ -31,6 +31,10 @@ img{
     width: auto;
 }
 
+.modal-footer button a {
+    color: white !important;
+}
+
  /*Medium ViewPort and Up */
 
 /*.dropdown-menu.show{*/

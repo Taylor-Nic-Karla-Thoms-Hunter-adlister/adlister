@@ -47,8 +47,8 @@
                 As a member you will gain access to ad content, either <strong>log in</strong> or <em>register now</em>!
             </div>
             <div class="modal-footer">
-                <button id="loginRedirect" type="button" class="btn btn-secondary"><a href="/login">login</a></button>
-                <button id="registerRedirect" type="button" class="btn btn-primary"><a href="/register">register</a></button>
+                <button id="loginRedirect" type="button" class="btn btn-success"><a href="/login">login</a></button>
+                <button id="registerRedirect" type="button" class="btn btn-warning"><a href="/register">register</a></button>
             </div>
         </div>
     </div>
