@@ -49,6 +49,14 @@
         <h4>Email</h4>
         <p class="email">${sessionScope.user.email}</p>
     </div>
+    <h2>
+        <a href="/create">Create New Listing</a>
+
+        <a href="/access">List All Ads</a>
+
+        <a href="/user-ads">View Your Ads</a>
+
+    </h2>
 
 </body>
 </html>
