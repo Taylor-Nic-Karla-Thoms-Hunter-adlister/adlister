@@ -74,3 +74,4 @@ INSERT INTO ads(user_id, title, description, initial_price, brand, bike_type, sp
 VALUES (4, 'Juliana Furtado CC X01 Reserve Complete','You say Furtado, we say Funtado. Tornado? Whatever you call it, the Juliana Furtado CC X01 Reserve Complete Mountain Bike (that''s its real name) is a whole boot full of hoot. The ultimate funbike, this 130mm travel ripper is as fast and agile as it is durable. With this latest frame update, it''s a little bit slacker, a little bit lower, and a whole lot more stable. The lower link-driven VPP® suspension does wonders for shorter-travel bikes, and this one''s no exception. All kitted out with Santa Cruz''s Reserve wheels, RockShox flagship suspension, and SRAM X01 Eagle? - yes, please! (courtesy of evo.com)', 8275.00, 'Juliana', 'mountain', 12, 'Small' , 'https://www.filestackapi.com/api/file/v3vyuhLPT4WR2MxNBmFi');
 
 
+
