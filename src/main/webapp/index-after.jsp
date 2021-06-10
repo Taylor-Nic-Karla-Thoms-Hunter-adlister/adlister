@@ -5,6 +5,8 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="San Antonio Bike Exchange" />
     </jsp:include>
+    <link rel="stylesheet" href="./css/navbarUnrestricted.css">
+
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar-after.jsp" />
