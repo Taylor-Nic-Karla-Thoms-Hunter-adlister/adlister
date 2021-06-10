@@ -78,7 +78,7 @@
             <button id="bikeImage" type="button" class="btn btn-success" onclick="myFunction()">Upload</button>
             <span><i class="fa fa-check hidden" style="color:green"></i></span>
         </div>
-        <input type="submit" class="btn btn-success btn-block" value="Submit">
+        <input type="submit" class="btn btn-info btn-block" value="Submit">
         <input id="hidden" name="hidden" class="form-control" type="hidden" value="">
     </form>
 </div>

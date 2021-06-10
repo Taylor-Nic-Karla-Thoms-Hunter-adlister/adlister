@@ -15,7 +15,7 @@
 
 <form id="searchBar" class="d-flex">
     <input id="searchInput" class="form-control" type="search" placeholder="Search" aria-label="Search">
-    <button id="search-button" class="btn btn-success" type="submit">Search</button>
+    <button id="search-button" class="btn btn-info" type="submit">Search</button>
 </form>
 
 <div class="container">
