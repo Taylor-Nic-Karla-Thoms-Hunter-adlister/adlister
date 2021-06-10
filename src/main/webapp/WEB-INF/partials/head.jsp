@@ -37,6 +37,14 @@
         border-radius: 50%;
     }
 
+    .owner-pic {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .navbar {
         padding: 0;
         background-color: seagreen;
