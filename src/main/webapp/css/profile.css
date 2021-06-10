@@ -1,0 +1,32 @@
+
+body {
+    background-color: salmon;
+
+
+}
+
+img{
+    height: auto;
+    width: 100%;
+    border-radius: 2em;
+
+}
+
+.profile-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    min-width: 250px;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border: solid black 2px;
+    background-color: teal;
+    border-radius: 2em;
+
+}
+
+.email {
+    text-decoration: none;
+    font-size: 1em;
+    color: black;
+}
+

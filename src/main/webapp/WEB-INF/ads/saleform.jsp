@@ -34,6 +34,8 @@
             client.picker(options).open();
         }
     </script>
+    <link rel="stylesheet" href="./css/navbarUnrestricted.css">
+
 </head>
 
 <body>

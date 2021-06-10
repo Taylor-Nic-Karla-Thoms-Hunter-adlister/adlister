@@ -8,6 +8,7 @@
     </jsp:include>
 
 <%--  CUSTOM CSS & JS  --%>
+    <link rel="stylesheet" href="./css/navbarRestricted.css">
     <link rel="stylesheet" href="./css/adlisting.css">
     <script src="js/restrictedListingView.js"></script>
 </head>
